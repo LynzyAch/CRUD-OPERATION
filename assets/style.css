@@ -1,0 +1,362 @@
+#bg-image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    filter: brightness(40%);
+
+    transform: scale(0);
+    transform-origin: center;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: url('bg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(2, 98, 177, 0.699);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #38caef;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #0591ee;
+}
+
+/* navigation bar */
+.nav-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    border-radius: 16px;
+    margin: 10px;
+}
+
+.nav-container .navbar-brand,
+.nav-container .nav-link {
+    color: aliceblue;
+}
+
+.nav-container .nav-link:hover {
+    color: rgba(240, 248, 255, 0.7);
+}
+
+
+#home{
+    margin-top: 110px;
+}
+
+.table-contain {
+    height: 420px;
+}
+#api{
+    margin-top: 120px;
+}
+
+.email-contain {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+
+/* From Uiverse.io by mrhyddenn */
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.shadow__btn {
+    background: rgb(0, 140, 255);
+    box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+        0 0 25px rgb(0, 140, 255),
+        0 0 50px rgb(0, 140, 255)
+}
+
+.glass-table-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+    max-height: 450px;
+    overflow-y: auto;
+
+}
+.glass-table-container .table {
+    background-color: transparent !important;
+    --bs-table-bg: transparent !important;
+    --bs-table-color: aliceblue !important;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.glass-table-container .table th,
+.glass-table-container .table td {
+    border-color: hsla(0, 0%, 100%, 0.1) !important;
+    color: aliceblue !important;
+    vertical-align: middle;
+    padding: 15px 20px !important;
+}
+
+/* 4. The Sticky Header */
+.glass-table-container thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background: rgba(15, 25, 35, 0.98) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    border-top: none !important;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+
+    /* The Glass Effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+
+    margin: 20px auto;
+}
+
+/* From Uiverse.io by mrhyddenn */
+.form-title {
+    color: aliceblue;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    min-width: min-content;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+#api-contain {
+    padding: 40px 20px;
+    border: none !important;
+}
+
+.country-card {
+    background: hsla(0, 0%, 100%, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    border-radius: 16px;
+    padding: 20px;
+    color: aliceblue;
+    height: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.country-flag {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.country-name {
+    color: hsl(170, 100%, 50%);
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.country-details p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+.country-details strong {
+    color: aliceblue;
+}
+
+.glass-search-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.search-title {
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glass-search {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: aliceblue !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+}
+
+.glass-search::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.glass-search:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #38caef !important;
+    box-shadow: 0 0 15px rgba(56, 202, 239, 0.4) !important;
+    outline: none;
+}
+
+.glass-table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.glass-table-container::-webkit-scrollbar-track {
+    background: rgba(2, 98, 177, 0.699);
+    border-radius: 10px;
+}
+
+.glass-table-container::-webkit-scrollbar-thumb {
+    background: #38caef;
+    border-radius: 10px;
+}
+
+.glass-table-container::-webkit-scrollbar-thumb:hover {
+    background: #0591ee;
+}
